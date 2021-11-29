@@ -1,0 +1,560 @@
+/**  =====================
+      Custom css start
+==========================  **/
+body {
+    background-color: #f3f3f3;
+    font-size: 0.875em;
+    overflow-x: hidden;
+    color: #353c4e;
+    font-family: "Open Sans", sans-serif; }
+  
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 0; }
+  
+*:focus {
+    outline: none; }
+  
+a {
+    font-size: 14px;
+    color: #303548; }
+    a:focus, a:hover {
+      text-decoration: none;
+      color: #4680ff; }
+  
+h6 {
+    font-size: 14px; }
+  
+p {
+    font-size: 13px; }
+    @media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px; } }
+  
+.media-left {
+    padding-right: 20px; }
+
+/**====== Custom css end ======**/
+
+/**====== Container ===========**/
+.mcontainer{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: #d5dae6;
+}
+
+.mcontainer[vertical-nav-type="expanded"][vertical-effect="overlay"] .overlay-box{
+    visibility: visible;
+    z-index: 1026;
+    opacity: 0.3;
+    transition: opacity 0.3s linear 0s;
+    -webkit-transition: opacity 0.3s linear;
+    -ms-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    overflow: hidden;
+}
+/*
+.mcontainer[vertical-effect="pink"][device-type="desktop"] .div-navbar,
+.mcontainer[vertical-effect="overlay"][device-type="tablet"] .div-navbar, 
+.mcontainer[vertical-effect="overlay"][device-type="phone"] .div-navbar{
+    display: block;
+}
+*/
+/**====== Container css end =======**/
+/**====== Navbar start ============**/
+.mheader{
+    position: fixed;
+    z-index: 1028;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 11px rgb(0 0 0 / 13%);
+    display: block;
+}
+
+.mheader .navbar-logo[logo-theme="logo-theme-1"] {
+    /*background-color: #303549;*/
+}
+
+.header-navbar .navbar-wrapper .navbar-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    float: left;
+    height: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 270px;
+    padding: 10px;
+}
+
+.mheader .navbar-logo a {
+    color: #fff;
+}
+
+.header-navbar{
+    min-height: 80px;
+    padding: 0;
+}
+
+.header-navbar .navbar-wrapper .navbar-logo .mobile-menu {
+    position: absolute;
+    right: 22px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 5px 9px;
+    top: 24px;
+    display: none;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .nav-right {
+    float: right;
+    margin-bottom: 0;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .nav-right li {
+    float: left;
+    line-height: 5;
+    padding: 0 10px;
+    position: relative;
+}
+
+.header-navbar .navbar-wrapper .navbar-logo .mobile-options{
+    display: none;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification{
+    perspective: 1000px;
+    z-index: 99;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .nav-right li > a {
+    font-size: 16px;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .nav-right a {
+    padding: 0 0.6rem;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .nav-right .user-profile img {
+    margin-right: 10px;
+    width: 40px;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .nav-right .user-profile i {
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification .show-notification, 
+.header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification{
+    -webkit-transform: translateY(30px);
+    background: #fff;
+    box-shadow: 0 0 1px 2px rgb(0 0 0 / 3%), 0 -2px 1px -2px rgb(0 0 0 / 2%), 0 0 0 -1px rgb(0 0 0 / 3%);
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transform: translateY(30px);
+    transition: all linear 0.3s;
+    visibility: hidden;
+    width: 24rem;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification:hover .show-notification,  
+.header-navbar .navbar-wrapper .navbar-container .header-notification:hover .profile-notification {
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible; 
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification{
+    width: 17em;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification li{
+    border-top: none;
+    padding: 0.7em 20px;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification li:first-child {
+    padding: 0.7em 20px;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification .show-notification li, 
+.header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification li{
+    border-top: 1px solid #4680ff, #FFB64D, #e0e0e0, #FC6180, #93BE52, #303548, #62d1f3;
+    line-height: initial;
+    padding: 1em 20px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification a{
+    font-size: 15px;
+    padding-left: 0px;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification i{
+    font-size: 15px;
+    margin-left: 0px;
+    padding-right: 10px;
+}
+
+.header-navbar .navbar-wrapper .navbar-container .header-notification .show-notification li:hover, 
+.header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification li:hover{
+    background-color: #f1f1f1; 
+}
+
+/**====== Navbar css end ==========**/
+/**====== Main container start ====**/
+.div-main-container {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    background: #F6F7FB;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+}
+
+.div-wrapper{
+    position: relative;
+    margin: 0 auto;
+}
+
+.div-navbar{
+    width: 270px;
+    display: block;
+    float: left;
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 0 11px rgb(0 0 0 / 13%);
+    z-index: 1027;
+    height: 100%;
+}
+
+.main-menu{
+    float: left;
+    width: 270px;
+    z-index: 99;
+    background: red;
+}
+
+.inner-navbar{
+    display: block;
+    position: relative;
+}
+
+.mCB_container_wrapper{
+    position: absolute;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.div-navbar .mitem {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.div-navbar .mitem > li {
+    display: block;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.div-navbar .mitem li > a{
+    border: none;
+}
+
+.div-navbar .mitem > li.active > a{
+    color: #fff;
+    font-weight: 600;
+}
+
+.div-navbar .mitem > li.active > a:before{
+    border-left-color: #fff;
+    border-left-style: solid;
+    border-left-width: 5px;
+    content: " ";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.div-navbar .mitem > li > a{
+    color: #000 imt !important;
+    text-align: left;
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.div-navbar .mitem > li > a > .micon{
+    font-size: 15px;
+    padding: 4px;
+    margin-right: 10px;
+    color: #fff;
+    border-radius: 4px;
+    width: 30px;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+}
+
+.div-navbar .mitem > li > a .mtext{
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    padding-left: 10px;
+}
+
+    /**======= Content css ============**/
+    .div-content{
+        margin-left: 270px;
+        float: unset;
+        right: 0;
+        position: relative;
+        display: block;
+    }
+
+    .div-inner-content{
+        padding: 10px;
+    }
+
+    .main-body .page-wrapper{
+        padding: 1.8rem;
+        transition: all ease-in 0.3s;
+    }
+
+    .card {
+        border-radius: 5px;
+        box-shadow: 0 1px 11px 0 rgb(0 0 0 / 12%);
+        border: none;
+        margin-bottom: 30px;
+    }
+
+    .widget-card-1 {
+        margin-top: 40px;
+        text-align: right;
+    }
+
+    .card .card-block-small {
+        padding: 15px 20px;
+    }
+
+    .widget-card-1 .card-icon {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: -15px;
+        font-size: 35px;
+        border-radius: 8px;
+        display: flex;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .widget-card-1:hover .card-icon {
+        top: -25px;
+    }
+
+    .text-muted{
+        color: #919aa3;
+    }
+
+    .bg-c-blue {
+        background-color: #4680ff;
+    }
+
+    .bg-c-pink{
+        background-color: #FC6180;
+    }
+
+    .bg-c-green{
+        background-color: #93BE52;
+    }
+
+    .bg-c-yellow{
+        background-color: #FFB64D;
+    }
+
+    .text-c-blue{
+        color: #4680ff;
+    }
+
+    .text-c-pink{
+        color: #fc6180;
+    }
+
+    .text-c-green{
+        color: #93BE52;
+    }
+
+    .text-c-yellow{
+        color:#FFB64D;
+    }
+
+    .f-left{
+        float: left;
+    }
+
+    .f-w-600{
+        font-weight: 600;
+    }
+
+    .m-t-10{
+        margin-top: 10px;
+    }
+
+    /**======= Content end ============**/
+
+/**====== Main container end ======**/
+
+/**====== Overlay box css =========**/
+.overlay-box{
+    background: #000 none repeat scroll 0 0;
+    bottom: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear;
+    -webkit-transition: opacity 0.3s linear;
+    -ms-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    overflow: hidden;
+}
+
+
+
+/**====== Overlay box end =========**/
+
+/**===========quan-ly-chien-dich=========**/
+
+/**===========form search================**/
+.has-search .form-control-feedback {
+    right: initial;
+    left: 0;
+    color: #ccc;
+}
+
+.has-search .form-control {
+    padding-right: 12px;
+    padding-left: 34px;
+}
+
+
+.showActive{
+    display: block;
+}
+
+.hiddenActive{
+    display: none;
+}
+
+@media only screen and (max-width: 1199px){
+    .widget-card-1 {
+        margin-top: 10px;
+    }
+    
+}
+
+@media only screen and (max-width: 993px){
+    .header-navbar .navbar, .navbar .navbar-logo {
+        width: 100% !important;
+    }
+
+    .div-navbar{
+        display: block;
+    }
+
+    .overlay-box{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .header-navbar{
+        position: fixed !important;
+        z-index: 1209;
+    }
+    
+    .header-navbar .navbar-wrapper .navbar-logo{
+        justify-content: center;
+    }
+
+    .header-navbar .navbar-wrapper .navbar-logo .mobile-menu{
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 23px;
+        right: auto;
+    }
+
+    .div-navbar{
+        display: none;
+    }
+
+    .header-navbar .navbar-wrapper .navbar-logo .mobile-options {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    .header-navbar .navbar-wrapper .navbar-logo a img{
+        display: inline-block !important;
+    }
+
+    .header-navbar .navbar-wrapper .navbar-container .nav-right {
+        display: none;
+    }
+
+    .div-main-container {
+        margin-top: 80px !important;
+    }
+
+    .div-content{
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    /*
+    .header-navbar .navbar-wrapper .navbar-logo {
+        display: inherit;
+    }
+    */
+}
+
+
+
+
+
+
+
+
