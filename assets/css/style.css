@@ -455,19 +455,157 @@ p {
 /**====== Overlay box end =========**/
 
 /**===========quan-ly-chien-dich=========**/
-
-/**===========form search================**/
-.has-search .form-control-feedback {
-    right: initial;
-    left: 0;
-    color: #ccc;
+.main-body .page-wrapper-manager{
+    padding: 0;
 }
 
-.has-search .form-control {
-    padding-right: 12px;
-    padding-left: 34px;
+    /**===========form action=========**/
+    .table-wrapper .table-title .form-saction{
+        margin-top: 20px;
+    }
+
+    .table-wrapper .table-title .form-saction .label-saction{
+        margin-right: 20px;
+    }
+
+    .table-wrapper .table-title .form-select-item{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .table-wrapper .table-title .label-select-item{
+        margin-right: 35px;
+    }
+
+    .table-wrapper .checkbox-del{
+        display: flex;
+    }
+
+    .table-wrapper .checkbox-del .checkbox-del-group{
+        margin-top: 5px;
+        margin-left: -5px;
+        margin-right: 5px;
+    }
+
+    .table-wrapper .checkbox-del .btn-del{
+        padding: 0;
+    }
+
+    .table-wrapper .table .td-action{
+        text-align: center;
+    }
+
+    .table-wrapper table.table td a{
+        font-size: 16px;
+        padding-right: 10px;
+    }
+
+    .table-wrapper .table .td-action .edit{
+        color: #FFC107;
+    }
+
+    .table-wrapper .table .td-action .delete{
+        color: #E34724;
+    }
+    /**===========form action end=====**/
+    /**===========form search================**/
+    .has-search{
+        margin-top: 10px;
+    }
+
+    .has-search .form-control-feedback {
+        right: initial;
+        position: absolute;
+        left: 25px;
+        top: 22px;
+        color: #ccc;
+    }
+
+    .has-search .form-control {
+        padding-right: 12px;
+        padding-left: 34px;
+        border-radius: 1.25em;
+        font-size: 0.95rem;
+    }
+
+    /**==========form seardch end=======**/
+    /**==========bottom table ==========**/
+    .hint-text{
+        float: left;
+    }
+
+        /*======box pagination ====*/
+        div.box-pagination{
+            float: right;
+            width: 200px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* set style a element*/
+        div.box-pagination div.pagination a{
+            float: left;
+            padding:  4px 10px;
+            text-decoration: none;
+        }
+
+        div.box-pagination div.pagination a i{
+            font-size: 11px;
+        } 
+
+        /* class active */
+        .iactive{
+            background-color: #0397d6;
+            color: #fff;
+            border-radius: 50%;
+        }
+
+        div.box-pagination div.pagination a:hover:not(.iactive){
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+    /**==========bottom table end=======**/
+
+    #datepicker{
+        width:180px; 
+        margin: 0 20px 20px 20px;
+    }
+    #datepicker > span:hover{
+        cursor: pointer;
+    }
+
+.label{
+    display: inline;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
 }
 
+.label-warning{
+    background-color: #f0ad4e;
+}
+
+.label-success {
+    background-color: #5cb85c;
+}
+
+.label-danger {
+    background-color: #d9534f;
+}
+
+.label-info {
+    background-color: #5bc0de;
+}
+
+.label-primary {
+    background-color: #337ab7;
+}
 
 .showActive{
     display: block;

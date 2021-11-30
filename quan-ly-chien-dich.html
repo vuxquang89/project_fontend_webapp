@@ -52,12 +52,12 @@
                             <ul class="show-notification profile-notification">
                                 <li class="complete">
                                     <a href="#">
-                                        <i class="ti-user"></i>Profile                                        
+                                        <i class="ti-user"></i>Thông tin tài khoản                                       
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="ti-layout-sidebar-left"></i>Logout
+                                        <i class="ti-layout-sidebar-left"></i>Đăng xuất
                                     </a>
                                 </li>
                             </ul>
@@ -77,24 +77,32 @@
                                         <li class="active">
                                             <a href="#">
                                                 <span class="micon">
-                                                    <i class="ti-home"></i>
-                                                    <span class="mtext">Dashboard</span>
+                                                    <i class="ti-settings"></i>
+                                                    <span class="mtext">Bảng điều khiển</span>
                                                 </span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
                                                 <span class="micon">
-                                                    <i class="ti-home"></i>
-                                                    <span class="mtext">Dashboard</span>
+                                                    <i class="ti-bookmark-alt"></i>
+                                                    <span class="mtext">Quản lý chiến dịch</span>
                                                 </span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
                                                 <span class="micon">
-                                                    <i class="ti-home"></i>
-                                                    <span class="mtext">Dashboard</span>
+                                                    <i class="ti-user"></i>
+                                                    <span class="mtext">Quản lý người dùng</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="micon">
+                                                    <i class="ti-time"></i>
+                                                    <span class="mtext">Lịch sử quyên góp</span>
                                                 </span>
                                             </a>
                                         </li>
@@ -107,8 +115,8 @@
                 <div class="div-content">
                     <div class="div-inner-content">
                         <div class="main-body">
-                            <div class="page-wrapper">
-                                <div class="page-body">
+                            <div class="page-wrapper page-wrapper-manager">
+                                <div class="page-body">    
                                     <div class="row">
                                         
                                         <div class="col-md-12 col-xl-12">
@@ -117,15 +125,41 @@
                                                     <div class="row">
                                                         <div class="col-sm-8"><h2>Quản lý chiến dịch</h2></div>
                                                         <div class="col-sm-4">
-                                                            <input type="button" value="Thêm chiến dịch mới">
+                                                            <button class="btn btn-info" type="button">Thêm chiến dịch mới</button>
                                                         </div>
-                                                        <div class="col-sm-12">Trạng trái</div>
+                                                        <div class="col-sm-12">
+                                                            <form class="form-inline form-saction">
+                                                                <div class="form-group">
+                                                                    <label class="control-label label-saction" for="saction">Trạng thái: </label>
+                                                                    <div class="select-action">
+                                                                        <select class="form-control" id="saction">
+                                                                            <option value="0">Chưa kích hoạt</option>
+                                                                            <option value="1">Đang hoạt động</option>
+                                                                            <option value="2">Đã hết hạn</option>
+                                                                            <option value="3">Đã hoàn thành</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
                                                         <div class="col-sm-8">
-                                                            <div>Hiển thị</div>
+                                                            <form class="form-inline form-select-item">
+                                                                <div class="form-group">
+                                                                    <label class="control-label label-select-item" for="sitem">Hiển thị: </label>
+                                                                    <div class="select-item">
+                                                                        <select class="form-control" id="sitem">
+                                                                            <option value="10">10</option>
+                                                                            <option value="20">20</option>
+                                                                            <option value="30">30</option>
+                                                                            <option value="40">40</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
                                                         </div>            
                                                         <div class="col-sm-4">
                                                             <div class="form-group has-feedback has-search">
-                                                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                                                <span class="ti-search form-control-feedback"></span>
                                                                 <input type="text" class="form-control" placeholder="Tìm kiếm">
                                                             </div>
                                                         </div>
@@ -134,7 +168,12 @@
                                                 <table class="table table-based table-hover">
                                                     <thead>
                                                         <tr>
-                                                            <th>#</th>
+                                                            <th>
+                                                                <div class="checkbox-del">
+                                                                    <input class="checkbox-del-group" type="checkbox" value="">
+                                                                    <button class="btn btn-danger btn-del" type="button"><i class="ti-trash"></i></button>
+                                                                </div>
+                                                            </th>
                                                             <th>Tên chiến dịch<i class="fa fa-sort"></i></th>
                                                             <th>Mức quyên góp</th>
                                                             <th>Ngày bắt đầu<i class="fa fa-sort"></i></th>
@@ -145,57 +184,70 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td>
+                                                                <div class="checkbox-del">
+                                                                    <input class="checkbox-del-group" type="checkbox" value="">                                                    
+                                                                </div>
+                                                            </td>
                                                             <td>Tình thương cho em - Ủng hộ trẻ mồ côi vì dịch bệnh</td>
                                                             <td>1.000.000.000</td>
                                                             <td>19/12/2021</td>
                                                             <td>19/02/2022</td>
-                                                            <td>Chưa kích hoạt</td>
                                                             <td>
-                                                                <a href="#" class="view" title="" data-toggle="tooltip" data-original-title="View"><i class="material-icons"></i></a>
-                                                                <a href="#" class="edit" title="" data-toggle="tooltip" data-original-title="Edit"><i class="material-icons"></i></a>
-                                                                <a href="#" class="delete" title="" data-toggle="tooltip" data-original-title="Delete"><i class="material-icons"></i></a>
+                                                                <span class="label label-warning">Chưa kích hoạt</span>
+                                                            </td>
+                                                            <td class="td-action">
+                                                                <a href="#" class="edit" title="Chỉnh sửa"><i class="ti-pencil"></i></a>
+                                                                <a href="#" class="delete" title="Xóa"><i class="ti-trash"></i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td>
+                                                                <div class="checkbox-del">
+                                                                    <input class="checkbox-del-group" type="checkbox" value="">                                                    
+                                                                </div>
+                                                            </td>
                                                             <td>Tình thương cho em - Ủng hộ trẻ mồ côi vì dịch bệnh</td>
                                                             <td>1.000.000.000</td>
                                                             <td>19/12/2021</td>
                                                             <td>19/02/2022</td>
                                                             <td>Chưa kích hoạt</td>
-                                                            <td>
-                                                                <a href="#" class="view" title="" data-toggle="tooltip" data-original-title="View"><i class="material-icons"></i></a>
-                                                                <a href="#" class="edit" title="" data-toggle="tooltip" data-original-title="Edit"><i class="material-icons"></i></a>
-                                                                <a href="#" class="delete" title="" data-toggle="tooltip" data-original-title="Delete"><i class="material-icons"></i></a>
+                                                            <td class="td-action">
+                                                                <a href="#" class="edit" title="Chỉnh sửa"><i class="ti-pencil"></i></a>
+                                                                <a href="#" class="delete" title="Xóa"><i class="ti-trash"></i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td>
+                                                                <div class="checkbox-del">
+                                                                    <input class="checkbox-del-group" type="checkbox" value="">                                                    
+                                                                </div>
+                                                            </td>
                                                             <td>Tình thương cho em - Ủng hộ trẻ mồ côi vì dịch bệnh</td>
                                                             <td>1.000.000.000</td>
                                                             <td>19/12/2021</td>
                                                             <td>19/02/2022</td>
                                                             <td>Chưa kích hoạt</td>
-                                                            <td>
-                                                                <a href="#" class="view" title="" data-toggle="tooltip" data-original-title="View"><i class="material-icons"></i></a>
-                                                                <a href="#" class="edit" title="" data-toggle="tooltip" data-original-title="Edit"><i class="material-icons"></i></a>
-                                                                <a href="#" class="delete" title="" data-toggle="tooltip" data-original-title="Delete"><i class="material-icons"></i></a>
+                                                            <td class="td-action">
+                                                                <a href="#" class="edit" title="Chỉnh sửa"><i class="ti-pencil"></i></a>
+                                                                <a href="#" class="delete" title="Xóa"><i class="ti-trash"></i></a>
                                                             </td>
                                                         </tr>       
                                                     </tbody>
                                                 </table>
                                                 <div class="clearfix">
-                                                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                                                    <ul class="pagination">
-                                                        <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                                                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                                                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                                        <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
-                                                    </ul>
+                                                    <div class="hint-text">Hiển thị <b>10</b> trong số <b>25</b> mục</div>
+                                                    <div class="box-pagination">
+                                                        <div class="pagination">
+                                                            <a href="#"><i class="ti-angle-double-left"></i></a>
+                                                            <a class="iactive" href="#">1</a>
+                                                            <a href="#">2</a>
+                                                            <a href="#">3</a>
+                                                            <a href="#">4</a>
+                                                            <a href="#">5</a>
+                                                            <a href="#"><i class="ti-angle-double-right"></i></a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -207,11 +259,7 @@
                 </div>
             </div>
         </div>
-        <div class="fixed-button active">
-            <a href="#" class="btn btn-md btn-primary">
-                Top
-            </a>
-        </div>
+        
     </div>
 
 

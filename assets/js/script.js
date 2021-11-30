@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var date = new Date();
     var $window = $(window);
     //add id to main menu for mobile menu start
     var getBody = $("body");
@@ -32,6 +33,35 @@ $(document).ready(function(){
         //$(".overlay-box").removeClass( "hiddenActive" ).addClass("showActive");
         
     });
+
+    /*===========datepicker==============*/
+    var day = ("0" + date.getDate()).slice(-2);
+    var month = ("0" + (date.getMonth() + 1)).slice(-2);
+    var today = day + "-" + month + "-" + date.getFullYear();
+    $("#from-date").val(today);
+    $("#from-datepicker").datepicker({ 
+        autoclose: true, 
+        todayHighlight: true,
+        startDate: date      
+    }).on('changeDate', function(selected){
+        startDate = new Date(selected.date.valueOf());
+        startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+        $("#to-datepicker").datepicker('setStartDate', startDate);
+    });
+
+    $("#to-datepicker").datepicker({
+        format: "dd-mm-yyyy",
+        autoclose: true, 
+        todayHighlight: true,
+        startDate: date
+    }).on('changeDate', function(selected){
+        fromEndDate = new Date(selected.date.valueOf());
+        fromEndDate.setDate(fromEndDate.getDate(new Date(selected.date.valueOf())));
+        $("#from-datepicker").datepicker("setEndDate", fromEndDate);
+    });
+
+    /*===========datepicker end==============*/
+
     $(window).resize(function() {
         totalwidth = $(window)[0].innerWidth;
         if (totalwidth >= 768 && totalwidth <= 992) {

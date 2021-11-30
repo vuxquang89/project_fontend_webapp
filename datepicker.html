@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet prefetch" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    
+    
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-5">
+           <div class="form-group">
+              <div class="input-group date" id="datepicker6" data-date-format="dd-mm-yyyy">
+                 <input id="from" type="text" class="form-control" readonly>
+                 <span class="input-group-addon">
+                 <span class="glyphicon glyphicon-calendar"></span>
+                 </span>
+              </div>
+           </div>
+        </div>
+        <div class="col-md-5">
+           <div class="form-group">
+              <div class="input-group date" id="datepicker7">
+                 <input id="to" type="text" class="form-control" readonly>
+                 <span class="input-group-addon">
+                 <span class="glyphicon glyphicon-calendar"></span>
+                 </span>
+              </div>
+           </div>
+        </div>
+     </div>
+     <script type="text/javascript">
+        $(function () {
+            /*
+            var dateToday = new Date();
+            var dates = $("#from, #to").datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 1,
+                minDate: dateToday,
+                onSelect: function(selectedDate) {
+                    var option = this.id == "from" ? "minDate" : "maxDate",
+                        instance = $(this).data("datepicker"),
+                        date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
+                    dates.not(this).datepicker("option", option, date);
+                }
+            });
+            */
+            $("#datepicker6").datepicker({ 
+                autoclose: true, 
+                todayHighlight: true,
+                startDate: new Date(),
+                multidate: false,
+    multidateSeparator: ",",
+    toggleActive: true
+                
+                //minDate: new Date()
+            }).on('changeDate', function(selected){
+                startDate = new Date(selected.date.valueOf());
+                startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+                $("#datepicker7").datepicker('setStartDate', startDate);
+            });
+
+            $("#datepicker7").datepicker({
+                format: "dd-mm-yyyy",
+                autoclose: true, 
+                todayHighlight: true,
+                startDate: new Date()
+            }).on('changeDate', function(selected){
+                fromEndDate = new Date(selected.date.valueOf());
+                fromEndDate.setDate(fromEndDate.getDate(new Date(selected.date.valueOf())));
+                $("#datepicker6").datepicker("setEndDate", fromEndDate);
+            });
+            /*
+            $("#from").datepicker({
+                dateFormat: "dd-M-yy",
+                maxDate: "+1d",
+                minDate: new Date(),
+                onClose: function (selectedDate) {             
+                    // Set 'TO' minDate
+                    $("#to").datepicker("option", "minDate", selectedDate);             
+                    
+                    // Set 'TO' maxDate at 3 months if before yesterday
+                    var dt = new Date($(this).datepicker("getDate"));
+                    dt.setMonth(dt.getMonth() + 3);
+                    if(dt < Date.now()) {
+                        $("#to").datepicker("option", "maxDate", dt);
+                    }
+                }
+            });
+            */
+        });
+        
+     </script>
+</body>
+</html>
