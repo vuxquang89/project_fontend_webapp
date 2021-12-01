@@ -172,7 +172,7 @@ p {
 }
 
 .header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification{
-    width: 17em;
+    width: 25em;
 }
 
 .header-navbar .navbar-wrapper .navbar-container .header-notification .profile-notification li{
@@ -572,6 +572,71 @@ p {
     }
     #datepicker > span:hover{
         cursor: pointer;
+    }
+
+/**=============Them moi chien dich=========**/
+div.page-wrapper div.page-body h3.title{
+    padding-bottom: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+div.page-wrapper div.page-body .col{
+    padding: 0;
+}
+
+div.page-wrapper div.page-body .col .lable-input{
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 30px;
+    font-weight: normal;
+}
+
+div.page-wrapper div.page-body .col .lable-input .stick{
+    color: #ff0000;
+}
+
+div.page-wrapper div.page-body div.btn-action-group{
+    padding-top: 10px;
+}
+
+div.page-wrapper div.page-body div.btn-action-group button{
+    margin: 10px
+}
+
+div.page-wrapper div.page-body #editor{
+    background: #fff;
+    height: 200px;
+}
+    /**==========brown input file img=====**/
+    .btn-file{
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-file input[type=file]{
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: #fff;
+        cursor: inherit;
+        display: block;
+    }
+
+    .img-box{
+        width: 150px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #img-upload{
+        width: 100%;
     }
 
 .label{
